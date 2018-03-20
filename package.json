@@ -1,0 +1,27 @@
+{
+  "name": "oss-uploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quancheng-ec/oss-uploader.git"
+  },
+  "keywords": [
+    "oss"
+  ],
+  "author": "wen911119@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quancheng-ec/oss-uploader/issues"
+  },
+  "homepage": "https://github.com/quancheng-ec/oss-uploader#readme",
+  "dependencies": {
+    "ali-oss": "^4.13.2",
+    "co": "^4.6.0"
+  }
+}
