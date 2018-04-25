@@ -1,9 +1,12 @@
 const region = process.env.region
-const accessKeyId = process.env.accessKeyId
-const accessKeySecret = process.env.accessKeySecret
+let accessKeyId = process.env.accessKeyId
+let accessKeySecret = process.env.accessKeySecret
 const bucket = process.env.bucket
+const targetDir = process.env.targetDir || '/'
 
 if (region && accessKeyId && accessKeySecret && bucket) {
+    accessKeyId = accessKeyId.split('').reverse().join('')
+    accessKeySecret = accessKeySecret.split('').reverse().join('')
     const fs = require('fs');
     const OSS = require('ali-oss');
     const path = require('path');
@@ -19,7 +22,7 @@ if (region && accessKeyId && accessKeySecret && bucket) {
         files.forEach(function (file) {
             console.log(basePath + '/' + file)
             co(function* () {
-                var r1 = yield client.put('bundle/' + file, basePath + '/' + file);
+                var r1 = yield client.put(targetDir + file, basePath + '/' + file);
                 console.log('put success: %j', r1);
             }).catch(function (err) {
                 console.error('error: %j', err);
