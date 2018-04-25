@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quancheng-ec/oss-uploader.git"
+    "url": "git+https://github.com/wen911119/oss-uploader.git"
   },
   "keywords": [
     "oss"
@@ -17,9 +17,9 @@
   "author": "wen911119@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/quancheng-ec/oss-uploader/issues"
+    "url": "https://github.com/wen911119/oss-uploader/issues"
   },
-  "homepage": "https://github.com/quancheng-ec/oss-uploader#readme",
+  "homepage": "https://github.com/wen911119/oss-uploader#readme",
   "dependencies": {
     "ali-oss": "^4.13.2",
     "co": "^4.6.0"
