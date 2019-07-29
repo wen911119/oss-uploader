@@ -1,6 +1,6 @@
 {
   "name": "oss-uploader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/wen911119/oss-uploader#readme",
   "dependencies": {
-    "ali-oss": "^4.13.2",
-    "co": "^4.6.0"
+    "ali-oss": "^6.1.1"
   }
 }
