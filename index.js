@@ -18,8 +18,13 @@ if (region && accessKeyId && accessKeySecret && bucket) {
   fs.readdir(basePath, function(err, files) {
     files.forEach(function(file) {
       console.log(basePath + "/" + file);
+      const cacheControl = file.includes('.html') ? 'no-cache' : 'max-age=63072000'
       client
-        .put(targetDir + file, basePath + "/" + file)
+        .put(targetDir + file, basePath + "/" + file, {
+          headers: {
+            'Cache-Control': cacheControl
+          }
+        })
         .then(result => {
           console.log("put success: %j", result);
         })
